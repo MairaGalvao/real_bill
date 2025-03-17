@@ -3,7 +3,7 @@ services:
     type: web
     runtime: python
     buildCommand: pip install -r requirements.txt && python manage.py migrate
-    startCommand: gunicorn myproject.wsgi:application
+    startCommand: gunicorn myapp.wsgi:application
     envVars:
       - key: DATABASE_URL
         sync: false
